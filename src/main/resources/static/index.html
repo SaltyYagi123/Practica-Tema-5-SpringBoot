@@ -4,17 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <form action="">
-        <div><input id="input_id" type="number" /></div>
-        <div><input id="input_name" type="text" /></div>
-        <div><input id="input_email" type="text" /></div>
-        <div><input id="input_dob" type="date" /></div>
-        <div><input id="input_age" type="number" /></div>
-      </form>
+    <div id="main" class="main-container">
+      <div class="box">
+        <h2>Registrarse como estudiante</h2>
+        <form action="">
+          <div class="input-box">
+            <label>Numero de Identificación:</label>
+            <input id="input_id" type="number" />
+          </div>
+          <div class="input-box">
+            <label>Nombre:</label>
+            <input id="input_name" type="text" />
+          </div>
+          <div class="input-box">
+            <label>Correo Electronico:</label>
+            <input id="input_email" type="text" />
+          </div>
+          <div class="input-box">
+            <label>Fecha de Nacimiento:</label>
+            <input id="input_dob" type="date" />
+          </div>
+          <div class="input-box">
+            <label>Edad:</label>
+            <input id="input_age" type="number" />
+          </div>
+          <!--Username and Password Test-->
+          <div class="input-box">
+            <input id="user-name" type="text" name="" required="" />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <input id="user-pass" type="password" name="" required="" />
+            <label>Password</label>
+          </div>
+          <!--Check 12-->
+          <input id="submit" type="submit" name="" value="Submit" />
+        </form>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>
