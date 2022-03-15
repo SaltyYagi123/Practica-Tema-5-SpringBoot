@@ -13,7 +13,7 @@ public class Estudiante {
     public Long getId() {
         return this.id;
     }
-
+    //public check
     public void setId(Long id) {
         this.id = id;
     }
