@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class miembroController {
 
-    Miembro miembros;
+    Miembro miembro;
 
     @GetMapping("/getMiembros") // Cuando pongamos /miembros en explorador
                                 // se va a ejecutar la funcion getmiembros
-    public String getMiembros() {
-        return miembros.toString();
+    public Miembro getMiembros() {
+        return miembro;
     }
 
     // En caso de que queramos enviar información
     // Dependiendo del metodo vamos a hacer get o post que se ejecute x funcion
     @PostMapping("/setMiembros")
-    public void postMiembros(@RequestBody Miembro miembros) {
-        this.miembros = miembros;
+    public void postMiembros(@RequestBody Miembro miembro) {
+        this.miembro = miembro;
     }
 
 }
