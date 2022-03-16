@@ -16,8 +16,8 @@ public class miembroController {
     // En caso de que queramos enviar información
     // Dependiendo del metodo vamos a hacer get o post que se ejecute x funcion
     @PostMapping("/members")
-    public Miembro postMiembros(@RequestBody Miembro estudiante) {
-        return estudiante; //Lo devuelve como un JSON a solas 
+    public Miembro postMiembros(@RequestBody Miembro miembros) {
+        return miembros; //Lo devuelve como un JSON a solas 
     }
 
 }

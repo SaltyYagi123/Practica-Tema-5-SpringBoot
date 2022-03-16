@@ -1,4 +1,4 @@
-const getClientData = async() => {
+const postClientData = async() => {
     //Obtenemos los datos del formulario 
     let input_id = document.getElementById('input_id').value;
     let input_name = document.getElementById('input_name').value;
@@ -27,15 +27,48 @@ const getClientData = async() => {
         dataType: "json"
     })
 
+
+
     if(request.ok) {
         console.log("Success!");
-        console.log(await request.json());
+        var data = await request.json();
+        console.log(data);
     }
 }
 
-let submit_button = document.getElementById('submit');
 
-submit_button.addEventListener('click', getClientData());
+const getClientData = async() => {
+    let get = await fetch("/getClients",{
+        method:"GET", 
+        credentials: "same-origin", 
+        dataType: "json",
+    });
+    if(get.ok)
+    {
+        var data = await get.json();
+        var idIn = data.id;
+        var nameIn = data.name;
+        var emailIn = data.email;
+        var dateOfBirthIn = data.dateOfBirth;
+        var ageIn = data.age;
+        var usernameIn = data.username;
+        var passwordIn = data.password;
+
+        document.getElementById('idIn').innerHTML = idIn;
+        document.getElementById('nameIn').innerHTML = nameIn;
+        document.getElementById('emailIn').innerHTML = emailIn;
+        document.getElementById('dateOfBirthIn').innerHTML = dateOfBirthIn;
+        document.getElementById('ageIn').innerHTML = ageIn;
+        document.getElementById('usernameIn').innerHTML = usernameIn;
+        document.getElementById('passwordIn').innerHTML = passwordIn;
+    }
+}
+
+let submit_button = document.getElementById('submit_button');
+let find_data_button = document.getElementById('find_data_button');
+
+submit_button.addEventListener('click', postClientData());
+find_data_button.addEventListener('click', getClientData());
 
 /*
 var sub, user, pass, mainContent, loggedIn;
