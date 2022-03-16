@@ -1,4 +1,4 @@
-const getStudentData = async() => {
+const getClientData = async() => {
     //Obtenemos los datos del formulario 
     let input_id = document.getElementById('input_id').value;
     let input_name = document.getElementById('input_name').value;
@@ -9,7 +9,7 @@ const getStudentData = async() => {
     let input_password = document.getElementById('user-pass').value;
 
     //Ahora debemos de hacer un fetch de contactos ? 
-    let request = await fetch("/estudiantes", { 
+    let request = await fetch("/members", { 
         method: 'POST',
         credentials: "same-origin", 
         headers: {
@@ -20,7 +20,9 @@ const getStudentData = async() => {
             name: input_name,
             email: input_email,
             dateOfBirth: input_dob,
-            age: parseInt(input_age)
+            age: parseInt(input_age),
+            username: input_username, 
+            password: input_password
         }), 
         dataType: "json"
     })
@@ -31,6 +33,9 @@ const getStudentData = async() => {
     }
 }
 
+let submit_button = document.getElementById('submit');
+
+submit_button.addEventListener('click', getClientData());
 
 /*
 var sub, user, pass, mainContent, loggedIn;
