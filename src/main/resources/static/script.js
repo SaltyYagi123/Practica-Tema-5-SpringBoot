@@ -9,7 +9,7 @@ const postClientData = async() => {
     let input_password = document.getElementById('user-pass').value;
 
     //Ahora debemos de hacer un fetch de contactos ? 
-    let request = await fetch("/members", { 
+    let request = await fetch("/setMiembros", { 
         method: 'POST',
         credentials: "same-origin", 
         headers: {
@@ -38,7 +38,7 @@ const postClientData = async() => {
 
 
 const getClientData = async() => {
-    let get = await fetch("/getClients",{
+    let get = await fetch("/getMiembros",{
         method:"GET", 
         credentials: "same-origin", 
         dataType: "json",
