@@ -47,23 +47,22 @@ find_data_button.addEventListener("click", getClientData = async () => {
     });
     if (get.ok) {
       var data = await get.json();
+      console.log(data.email);
       var idIn = data.id;
       var nameIn = data.name;
       var emailIn = data.email;
-      var dateOfBirthIn = data.dateOfBirth;
+      var dateOfBirthIn = data.dateOfBirth.toString();
       var ageIn = data.age;
       var usernameIn = data.username;
-      var passwordIn = data.password;
   
       document.getElementById("idIn").innerHTML = idIn;
       document.getElementById("nameIn").innerHTML = nameIn;
-      document.getElementById("emailIn").innerHTML = emailIn;
       document.getElementById("dateOfBirthIn").innerHTML = dateOfBirthIn;
       document.getElementById("ageIn").innerHTML = ageIn;
       document.getElementById("usernameIn").innerHTML = usernameIn;
-      document.getElementById("passwordIn").innerHTML = passwordIn;
+      document.getElementById("emailIn").innerHTML = emailIn;
     }
-  };
+  }
   );
 
 /*
