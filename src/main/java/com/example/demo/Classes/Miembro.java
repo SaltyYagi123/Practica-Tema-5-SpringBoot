@@ -2,13 +2,34 @@ package com.example.demo.Classes;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Miembro {
     private Long id;
+
+    @NotNull
+    @Size(min = 2, max = 25)
     private String name;
+
+    @NotNull
+    @Email
     private String email;
+
+    @NotNull
     private LocalDate dateOfBirth;
+
+    
     private Integer age;
+
+    @NotNull
+    @Size(min=2, max = 30)
     private String username;
+
+
+    @NotNull  
+    @Size(min=2, max=30)
     private String password;
 
     public String getUsername() {
