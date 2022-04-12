@@ -1,4 +1,4 @@
-# Práctica 7 - Primer Contacto con SpringBoot
+# Práctica 5 - Primer Contacto con SpringBoot
 En esta practica de PAT hemos hecho un primer contacto con las aplicaciones de SpringBoot. Investigando la relación entre el Front-End y el Back-End
 
 # Contenidos de la Practica
